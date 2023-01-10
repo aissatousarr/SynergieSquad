@@ -1,14 +1,12 @@
-                                                                                
 pipeline {
     agent any
 
     stages {
         stage('Build Docker Image') {
             steps {
-                
-                    sh 'docker build -t Synergie:latest .'
-                
+                dir("Containers/simple-flask-app") {
+                    sh 'docker build -t simple-flask-app:latest .'
+                }
             }
         }
-
 }
