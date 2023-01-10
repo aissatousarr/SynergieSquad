@@ -5,7 +5,7 @@ pipeline {
         stage('Build Docker Image') {
             steps {
                 
-                    sh 'docker build -t Synergie2:latest .'
+                    sh 'docker build -t synergie2:latest .'
                 
             }
         }
